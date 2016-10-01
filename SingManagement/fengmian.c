@@ -4,17 +4,13 @@
 int fengmian(void)
 {
 	int i;
-	/*
-	*显示封面字符画3秒
-	*/
-	system("type fengmian01.txt\n");
-	Sleep(3000);
+	
 	system("cls");
 	
 	/*
 	*菜单
 	*/
-	system("type fengmian02.txt\n");
+	system("type fengmian01.txt\n");
 	gotoxy(65, 18);
 	printf("歌手比赛成绩管理系统");
 	gotoxy(65, 30);
@@ -39,9 +35,8 @@ int fengmian(void)
 	scanf("%d", &i);
 
 	while ((i = getchar()) != '\n')
-	{
 		;
-	}
+
 	printf("%d", i);
 	
 	return i;

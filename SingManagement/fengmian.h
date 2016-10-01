@@ -19,5 +19,5 @@ extern void Ptime(void);
 /*
 *移动光标到指定位置
 */
-void gotoxy(int x, int y);
+extern void gotoxy(int x, int y);
 #endif // !_FENGMIAN_H
