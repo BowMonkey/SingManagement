@@ -18,7 +18,7 @@ int main(void)
 	case 5:addInfo(); break;
 	case 6:writeDoc(); break;
 	case 7:exitSys(); break;
-	case 10086:password(); break;
+	case 10:password(); break;
 
 	default:printf("Error! Please enter the function number!\n"); break;
 	}

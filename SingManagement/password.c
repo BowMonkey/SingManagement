@@ -5,33 +5,45 @@ void password(void)
 {
 	FILE * fp;
 	int i = 0;
-	int passWord[10] = { '\0' };
+	char passWord[40];
+	char currentWord[40];
+
+	system("cls");
+	
 	/*
-	*如果没有DATA文件，创建DATA文件并写入初始化密码“000000”
+	*如果没有DATA文件，创建DATA文件并写入初始化密码“123456”
 	*创建DATA文件失败则报错
 	*如果有则把密码写到passWord[]中备用
 	*/
-	if (NULL == (fp = fopen("DATA","r")))
+	fp = fopen("DATA", "r");
+	if (NULL == fp)
 	{
-		if (NULL == (fp = fopen("DATA", "w+")))
+		fp = fopen("DATA", "w+");
+		if (NULL != fp)
 		{
-			exit(EXIT_FAILURE);
+     		fprintf(fp, "123456");      //有问题，先略过。不能初始化密码啊混蛋
+			printf("已初始化密码\n");
+			fclose(fp);
 		}
 		else
 		{
-			fprintf(fp, "000000");
-			fclose(fp);
+			exit(EXIT_FAILURE);
 		}
 	}
 	else
 	{
-		while (fscanf(fp, "%d", &passWord[i]) != EOF)
-			i++;
+		while (fscanf(fp, "%s", passWord) == 1)
+		{
+			puts(passWord);
+		}
+			
+		fclose(fp);
 	}
-	for ( i = 0; i < 10; i++)
-	{
-		printf("%d", passWord[i]);
-	}
+	
+	
 
 	getchar();
+
+
+
 }
