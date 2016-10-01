@@ -45,6 +45,9 @@
     <ClCompile Include="fengmian.c">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="check.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="head.h">
@@ -75,6 +78,9 @@
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="fengmian.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="check.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>

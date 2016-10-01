@@ -36,11 +36,8 @@ void password()
 	}
 	else
 	{
-		while (fscanf(fp, "%s", passWord) == 1)
-		{
-			puts(passWord);//检验数组是否正确读入密码,正式版要把这句去了
+			fscanf(fp, "%s", passWord);
 			fclose(fp);
-		}
 	}
 	
 	/*

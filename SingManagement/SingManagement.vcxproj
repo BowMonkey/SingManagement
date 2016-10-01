@@ -143,6 +143,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="addInfo.c" />
+    <ClCompile Include="check.c" />
     <ClCompile Include="exitSys.c" />
     <ClCompile Include="fengmian.c" />
     <ClCompile Include="inputGrade.c" />
@@ -155,6 +156,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="addInfo.h" />
+    <ClInclude Include="check.h" />
     <ClInclude Include="exitSys.h" />
     <ClInclude Include="fengmian.h" />
     <ClInclude Include="head.h" />

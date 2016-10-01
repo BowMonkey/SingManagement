@@ -2,6 +2,18 @@
 
 void addInfo()
 {
-	printf("功能void addInfo()");
+	int i;
+
+	i = check();
+	if (i == 1)
+	{
+		printf("功能void addInfo()");
+		Sleep(3000);
+	}
+	else
+	{
+		printf("密码错误！\n");
+		Sleep(3000);
+	}
 	getchar();
 }

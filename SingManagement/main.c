@@ -9,6 +9,7 @@ int main(void)
 	system("mode con  cols=150 lines=50");
 	while (1)
 	{
+		system("cls");
 		switch (fengmian())
 		{
 
@@ -19,7 +20,7 @@ int main(void)
 		case 5:addInfo(); break;
 		case 6:writeDoc(); break;
 		case 7:exitSys(); break;
-		case 10:password(); break;
+		case 9:password(); break;
 
 		default:printf("Error! Please enter the function number!\n"); break;
 		}

@@ -33,11 +33,6 @@ int fengmian(void)
 	gotoxy(60, 45);
 	printf("ÇëÑ¡Ôñ¹¦ÄÜ±àºÅ£º");
 	scanf("%d", &i);
-
-	while ((i = getchar()) != '\n')
-		;
-
-	printf("%d", i);
 	
 	return i;
 
