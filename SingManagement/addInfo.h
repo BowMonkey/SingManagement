@@ -8,4 +8,5 @@
 *输入选手数据功能函数
 */
 extern void addInfo();
+
 #endif

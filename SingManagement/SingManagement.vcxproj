@@ -151,7 +151,6 @@
     <ClCompile Include="main.c" />
     <ClCompile Include="password.c" />
     <ClCompile Include="Rank.c" />
-    <ClCompile Include="README" />
     <ClCompile Include="writeDoc.c" />
   </ItemGroup>
   <ItemGroup>

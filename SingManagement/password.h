@@ -11,4 +11,6 @@
 */
 extern void password(void);
 
+//int passWord[10] = { '\0' };
+
 #endif
