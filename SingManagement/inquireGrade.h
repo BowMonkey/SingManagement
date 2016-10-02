@@ -6,7 +6,7 @@
 
 
 /*
-*查询选手信息功能函数
+*按编号查询选手信息功能函数
 */
 extern void inquireGrade();
 #endif

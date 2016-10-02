@@ -2,6 +2,6 @@
 
 void inquireGrade()
 {
-	printf("¹¦ÄÜvoid inquireGrade()");
+	
 	getchar();
 }

@@ -4,20 +4,21 @@
 
 /*
 *创建链表和其接口文件
+*程序参考：《C Primer Plus(第五版)》P495
 */
 struct infotag
 {
-	char num[6];//编号
-	char name[12];//姓名
-	char sex[2];//性别
-	char phoneNum[20];//联系方式（电话号码）
-	char grade[20];//成绩
-	int totalGrade[20];//总分
-	double averageGrade[20];//平均分
+	int num;                        //编号
+	char name[12];                  //姓名
+	char sex[12];                   //性别
+	char phoneNum[10];              //联系方式（电话号码）
+	char score[20];                 //成绩
+	int totalScore[20];             //总分
+	double averageScore[20];        //平均分
 };
 
 /*一般类型定义*/
-typedef struct infotag Singer;
+typedef struct infotag Singer;//Item
 
 typedef struct node
 {
@@ -26,6 +27,7 @@ typedef struct node
 }Node;
 
 typedef Node * List;
+
 /*
 *函数原型
 *操作：初始化一个列表

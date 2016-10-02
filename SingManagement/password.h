@@ -11,10 +11,5 @@
 */
 extern void password();
 
-/*
-*修改密码功能函数
-*/
-extern void changeWord();
-
 
 #endif

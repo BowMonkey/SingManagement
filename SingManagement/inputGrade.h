@@ -6,7 +6,7 @@
 
 
 /*
-*输入选手成绩功能函数
+*输入选手成绩功能（评委打分）函数
 */
 extern void inputGrade(void);
 #endif 

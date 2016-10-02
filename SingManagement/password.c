@@ -1,6 +1,9 @@
 
 #include "head.h"
 
+/*局部函数原型*/
+void changeWord();
+
 void password()
 {
 	FILE * fp;

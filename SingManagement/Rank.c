@@ -2,6 +2,9 @@
 
 void Rank(void)
 {
-	printf("功能void Rank(void)");
-	getchar();
+	printf("按任意键返回主菜单\n");
+	while (getchar() != '\n')
+		continue;
+
+	return;
 }

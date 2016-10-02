@@ -37,6 +37,7 @@ int fengmian(void)
 	gotoxy(60, 45);
 	printf("ÇëÑ¡Ôñ¹¦ÄÜ±àºÅ£º");
 	scanf("%d", &i);
+
 	
 	return i;
 
