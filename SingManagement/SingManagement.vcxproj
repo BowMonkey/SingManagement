@@ -149,6 +149,7 @@
     <ClCompile Include="inputGrade.c" />
     <ClCompile Include="inputInfo.c" />
     <ClCompile Include="inquireGrade.c" />
+    <ClCompile Include="list.c" />
     <ClCompile Include="main.c" />
     <ClCompile Include="password.c" />
     <ClCompile Include="Rank.c" />
@@ -163,6 +164,7 @@
     <ClInclude Include="inputGrade.h" />
     <ClInclude Include="inputInfo.h" />
     <ClInclude Include="inquireGrade.h" />
+    <ClInclude Include="list.h" />
     <ClInclude Include="password.h" />
     <ClInclude Include="Rank.h" />
     <ClInclude Include="writeDoc.h" />

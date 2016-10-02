@@ -1,6 +1,10 @@
 
 #include"head.h"
 
+/*局部函数原型*/
+extern void Ptime(void);
+extern void gotoxy(int x, int y);
+
 int fengmian(void)
 {
 	int i;
@@ -38,6 +42,7 @@ int fengmian(void)
 
 }
 
+/*局部函数定义*/
 /*显示当前时间的函数*/
 void Ptime(void)
 {

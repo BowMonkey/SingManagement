@@ -5,10 +5,10 @@
 
 #include"head.h"
 
-
 /*
-*输入歌手信息功能函数
+*输入选手信息功能函数
 */
 extern void inputInfo();
+
 #endif 
 

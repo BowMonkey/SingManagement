@@ -8,7 +8,8 @@
 #include<stdio.h>
 #include<stdlib.h>
 #include<time.h>
-#include <windows.h>
+#include<windows.h>
+#include<stdbool.h>
 
 #include "inputInfo.h"
 #include "inputGrade.h"
@@ -20,3 +21,4 @@
 #include "password.h"
 #include "fengmian.h"
 #include "check.h"
+#include "list.h"
