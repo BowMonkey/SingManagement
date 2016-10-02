@@ -3,13 +3,15 @@
 
 void showlist(Singer singer);
 
+List list;
+
 void inputInfo()
 {
 	int i;
 	FILE * fp;
 	if (check())
 	{
-		List list;
+//		List list;
 		Singer temp;
 
 		system("cls");
