@@ -2,8 +2,6 @@
 #ifndef _PASSWORD_H
 #define _PASSWORD_H
 
-#include"head.h"
-
 /*
 *管理员密码函数
 *第一次使用密码预置为123456

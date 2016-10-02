@@ -1,9 +1,6 @@
 
 #include"head.h"
 
-/*局部函数原型*/
-extern void Ptime(void);
-extern void gotoxy(int x, int y);
 
 int fengmian(void)
 {
