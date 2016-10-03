@@ -4,6 +4,7 @@
 
 /*
 *退出系统功能函数
+*确定退出返回true，否则返回false
 */
-extern void exitSys();
+extern bool exitSys();
 #endif

@@ -1,18 +1,29 @@
 #include"head.h"
 
-void exitSys()
+bool exitSys()
 {
-	int i;
+	FILE * fp;
+	int i = 0;
+	char ch;
 
-	i = check();
-	if (i == 1)
+	fp = fopen("Doc.txt", "r");
+	if (NULL == fp)
 	{
-		//此处为本功能的具体实现内容
+		printf("还没有保存选手数据！确定退出？(Y/N)\n");
+		while ((i = getchar()) != '\n')
+			;
+		scanf("%c", &ch);
+
+		switch (ch)
+		{
+		case 'Y':return true; break;
+		case 'N':return false; break;
+		default:printf("Y确定，N退出！\n");
+			break;
+		}
 	}
 	else
 	{
-		printf("密码错误！\n");
-		Sleep(3000);
+		return true;
 	}
-	getchar();
 }

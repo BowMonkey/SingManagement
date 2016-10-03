@@ -12,8 +12,8 @@ struct infotag
 	char name[12];                  //姓名
 	char sex[12];                   //性别
 	char phoneNum[10];              //联系方式（电话号码）
-	char score[20];                 //成绩
-	int totalScore[20];             //总分
+	char score[10];                 //成绩
+	char totalScore[20];             //总分
 	double averageScore[20];        //平均分
 };
 

@@ -4,6 +4,7 @@
 void showlist(Singer singer);
 
 List list;
+Singer temp;
 
 void inputInfo()
 {
@@ -11,8 +12,7 @@ void inputInfo()
 	FILE * fp;
 	if (check())
 	{
-//		List list;
-		Singer temp;
+//		Singer temp;
 
 		system("cls");
 		puts("输入要求为blalba(按回车继续)");
@@ -76,6 +76,7 @@ void inputInfo()
 		else
 		{
 			printf("这是输入信息：\n");
+			printf("%-2s\t%-8s%-2s\t%-8s\n","编号","姓名","性别","电话号码");
 			traverse(&list, showlist);
 		}
 		printf("你一共输入了%d个选手信息。\n", listItemCount(&list));
@@ -97,6 +98,6 @@ void inputInfo()
 
 void showlist(Singer singer)
 {
-	printf("编号：%d\t姓名：%s\t性别：%s\t电话：%s\n",
+	printf("%-2d\t%-8s%-2s\t%-8s\n",
 		singer.num, singer.name, singer.sex, singer.phoneNum);
 }

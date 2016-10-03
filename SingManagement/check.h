@@ -6,5 +6,5 @@
 *身份验证功能函数，在addInfo() inputGrade()  writeDoc()  inquireGrade()函数开头使用
 *验证失败返回false，成功返回true
 */
-extern int check(void);
+bool check(void);
 #endif

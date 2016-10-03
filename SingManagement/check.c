@@ -1,7 +1,7 @@
 
 #include"head.h"
 
-int check()
+bool check(void)
 {
 	FILE * fp;
 	int i;
