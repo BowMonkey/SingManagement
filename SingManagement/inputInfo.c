@@ -12,8 +12,6 @@ void inputInfo()
 	FILE * fp;
 	if (check())
 	{
-//		Singer temp;
-
 		system("cls");
 		puts("输入要求为blalba(按回车继续)");
 		while (getchar() != '\n')

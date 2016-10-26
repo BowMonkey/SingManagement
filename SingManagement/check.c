@@ -19,18 +19,18 @@ bool check(void)
 	if (NULL == fp)
 	{
 		fp = fopen("DATA", "w+");
-		if (NULL != fp)
+		if (NULL == fp)
+		{
+			exit(EXIT_FAILURE);
+		}
+		else
 		{
 			fprintf(fp, "123456");
-			fclose(fp);          
+			fclose(fp);         
 
 			fp = fopen("DATA", "r+");
 			fscanf(fp, "%s", passWord);
 			fclose(fp);
-		}
-		else
-		{
-			exit(EXIT_FAILURE);
 		}
 	}
 	else

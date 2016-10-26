@@ -74,6 +74,12 @@ bool addItem(Singer singer, List * plist);
 */
 void traverse(const List * plist, void(*pfun) (Singer singer));
 
+/*不成熟，在想想。。。。。。。。。。。
+*操作：从链表中查询相应编号信息
+void searchTable(const List * plist, void(*pfun)(int num));
+*/
+
+
 /*
 *操作：释放已分配的内存（如果有）
 *操作前：plist指向一个已初始化的列表

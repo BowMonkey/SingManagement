@@ -12,7 +12,6 @@ int main(void)
 		system("cls");
 		switch (fengmian())
 		{
-
 		case 1:inputInfo(); break;
 		case 2:inputGrade(); break;
 		case 3:Rank(); break;

@@ -23,18 +23,18 @@ void password()
 	if (NULL == fp)
 	{
 		fp = fopen("DATA", "w+");
-		if (NULL != fp)
+		if (NULL == fp)
 		{
-     		fprintf(fp, "123456");//fprintf()这个大坑比，必须fclose之后才能把数据写入文件
-			fclose(fp);           //debug俩小时就为了个这，尼玛
-			
-			fp = fopen("DATA", "r+");
-			fscanf(fp, "%s", passWord); //读取到passWord[]中
-			fclose(fp);
+			exit(EXIT_FAILURE);
 		}
 		else
 		{
-			exit(EXIT_FAILURE);
+			fprintf(fp, "123456");//fprintf()这个大坑比，必须fclose之后才能把数据写入文件
+			fclose(fp);           //debug俩小时就为了个这，尼玛
+
+			fp = fopen("DATA", "r+");
+			fscanf(fp, "%s", passWord); //读取到passWord[]中
+			fclose(fp);
 		}
 	}
 	else

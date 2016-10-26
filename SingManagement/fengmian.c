@@ -28,7 +28,7 @@ int fengmian(void)
 	printf("功能六：生成数据文件");
 	gotoxy(65, 42);
 	printf("功能七：退出系统");
-	gotoxy(115, 49);
+	gotoxy(110, 49);
 	Ptime();
 
 	gotoxy(60, 45);
