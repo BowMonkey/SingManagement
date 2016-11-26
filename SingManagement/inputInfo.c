@@ -1,6 +1,8 @@
 
 #include"head.h"
-
+/*
+*函数引用以及局部函数定义
+*/
 void showlist(Singer singer);
 
 List list;

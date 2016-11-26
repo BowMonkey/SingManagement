@@ -1,6 +1,9 @@
+
 #include"head.h"
 
-
+/*
+*函数引用以及局部函数定义
+*/
 extern List list;
 extern Singer temp;
 extern void showlist(Singer singer);
@@ -28,10 +31,10 @@ void writeDoc()
 				//在文件里写入各栏标题
 				fprintf(fp, "%-2s\t%-8s%-2s\t%-8s\n", "编号", "姓名", "性别", "电话号码");
 				//循环写入数据
-				while (pnode != NULL)
+				while (NULL != pnode)
 				{
 					fprintf(fp, "%-2d\t%-8s%-2s\t%-8s\n",
-						pnode->singer.num,pnode->singer.name,pnode->singer.sex,pnode->singer.phoneNum);
+						pnode->singer.num, pnode->singer.name, pnode->singer.sex, pnode->singer.phoneNum);
 					pnode = pnode->next;
 				}
 				fclose(fp);
