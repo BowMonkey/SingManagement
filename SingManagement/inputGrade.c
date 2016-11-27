@@ -36,7 +36,7 @@ void inputGrade(void)
 				system("cls");
 				showList(list);
 				printf("请输入要打分的选手编号：");
-				scanf("%d", &num);
+				scanf("%u", &num);
 			rechoose:
 				pnode = list;
 				//检测所输编号是否存在,存在numExit置为true,否则false

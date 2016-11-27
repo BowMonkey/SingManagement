@@ -9,17 +9,17 @@ bool exitSys()
 	fp = fopen("Doc.txt", "r");
 	if (NULL == fp)
 	{
-		printf("还没有保存选手数据！确定退出？(Y/N)\n");
+		printf("还没有保存选手数据！确定退出？(y/n)\n");
+	rechoose:
 		while ((i = getchar()) != '\n')
 			;
 		scanf("%c", &ch);
-
 		switch (ch)
 		{
-		case 'Y':return true; break;
-		case 'N':return false; break;
-		default:printf("Y确定，N退出！\n");
-			break;
+		case 'y':return true; break;
+		case 'n':return false; break;
+		default:printf("y确定，n退出！\n");
+			goto rechoose;
 		}
 	}
 	else
