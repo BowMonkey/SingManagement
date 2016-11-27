@@ -4,54 +4,82 @@
 局部函数定义
 */
 extern List list;
-extern Singer temp;
-void searchFile(int num);
-void searchTable(int num);
+extern void showList(Node *node);
 
 void inquireGrade()
 {
 	int i;
-
+	int num = 0;
+	Node * pnode = list;
+	bool numExist = true;
 	system("cls");
-rechoose:
-	printf("一：从已生成的数据文件查询\n");
-	printf("二：从链表中查询\n");
-	printf("请选择查询源：");
 
-	scanf("%d", &i);
-
-	switch (i)
+	if (listIsEmpty(&list))
 	{
-	case 1:searchFile(i); break;
-	case 2:searchTable(i); break;
-	default:printf("请输入1或者2！\n");
-		goto rechoose;
-		break;
-	}
-
-}
-
-/*从Doc.txt文件中查询相应编号信息*/
-void searchFile(int num)
-{
-	FILE * fp;
-	fp = fopen("Doc.txt", "r");
-	if (NULL == fp)
-	{
-		printf("文件Doc.txt不存在！请选择其他方式查询！\n");
+		printf("没有输入信息！\n");
 		Sleep(3000);
-		exit;
+		return;
 	}
 	else
 	{
-		//从文件读取数据到新链表——》查询
-		;
+		showList(pnode);
+		printf("请选择要查询的选手编号：");
+		scanf("%d", &num);
+	rechoose:
+		//检测所输编号是否存在,存在numExit置为true,否则false
+		for (size_t i = 0; i < listItemCount(&list); i++)
+		{
+			if (num == pnode->singer.num)
+			{
+				numExist = true;
+				break;
+			}
+			else
+			{
+				numExist = false;
+			}
+			pnode = pnode->next;
+		}
+		//经过上面循环之后pnode已不指向链表开始位置，所以重新赋值
+		pnode = list;
+		while ((i = getchar()) != '\n')
+			;
+		if (numExist)
+		{
+			//找到对应编号的节点
+			system("cls");
+			while (NULL != pnode)
+			{
+				if (pnode->singer.num == num)
+				{
+					printf("%-2s\t%-8s\t\t%-4s\t\t\t%-10s%-10s\n",
+						"编号", "姓名", "评委打分", "总分", "平均分");
+					printf("%-2d\t%-8s", pnode->singer.num, pnode->singer.name);
+
+					for (size_t i = 0; i < 10; i++)
+					{
+						printf("%-4d", pnode->singer.score[i]);
+					}
+					printf("%10d\t%10f\n", pnode->singer.totalScore, pnode->singer.averageScore);
+					printf("按回车退出。");
+					while ((i = getchar()) != '\n')
+						;
+					return;
+				}
+					
+				pnode = pnode->next;
+			}
+
+			pnode = list;
+		}
+		else
+		{
+			system("cls");
+			showList(list);
+			printf("编号不存在！请重新输入：");
+			scanf("%d", &num);
+			goto rechoose;
+		}
 	}
 }
 
-
-/*从链表中查询相应信息*/
-void searchTable(int num)
-{
-
-}
