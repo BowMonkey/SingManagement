@@ -10,20 +10,17 @@ void searchTable(int num);
 
 void inquireGrade()
 {
-	int i, j;
+	int i;
 
 	system("cls");
-	printf("请输入要查询的选手编号：");
-	scanf("%d", &i);
-	
 rechoose:
 	printf("一：从已生成的数据文件查询\n");
 	printf("二：从链表中查询\n");
 	printf("请选择查询源：");
-	
-	scanf("%d", &j);
 
-	switch (j)
+	scanf("%d", &i);
+
+	switch (i)
 	{
 	case 1:searchFile(i); break;
 	case 2:searchTable(i); break;
