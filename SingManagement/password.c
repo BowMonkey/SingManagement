@@ -31,16 +31,19 @@ void password()
 		{
 			fprintf(fp, "123456");//fprintf()这个大坑比，必须fclose之后才能把数据写入文件
 			fclose(fp);           //debug俩小时就为了个这，尼玛
+			fp = NULL;
 
 			fp = fopen("DATA", "r+");
 			fscanf(fp, "%s", passWord); //读取到passWord[]中
 			fclose(fp);
+			fp = NULL;
 		}
 	}
 	else
 	{
 			fscanf(fp, "%s", passWord);
 			fclose(fp);
+			fp = NULL;
 	}
 	
 	/*
@@ -100,6 +103,7 @@ void changeWord()
 	{
 		fprintf(fp, "%s", firstNewWord);
 		fclose(fp);
+		fp = NULL;
 		printf("修改成功！\n");
 		Sleep(3000);
 	}

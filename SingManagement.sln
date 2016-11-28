@@ -5,6 +5,8 @@ VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SingManagement", "SingManagement\SingManagement.vcxproj", "{FCFA62FC-30DB-40C3-9F9C-DF1A0BC1F15E}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "test", "test\test.vcxproj", "{5C9314CA-2FF9-4F7F-BA90-A317A0628FF9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -25,6 +27,16 @@ Global
 		{FCFA62FC-30DB-40C3-9F9C-DF1A0BC1F15E}.Release|x64.Build.0 = Release|x64
 		{FCFA62FC-30DB-40C3-9F9C-DF1A0BC1F15E}.Release|x86.ActiveCfg = Release|Win32
 		{FCFA62FC-30DB-40C3-9F9C-DF1A0BC1F15E}.Release|x86.Build.0 = Release|Win32
+		{5C9314CA-2FF9-4F7F-BA90-A317A0628FF9}.Debug|Any CPU.ActiveCfg = Debug|Win32
+		{5C9314CA-2FF9-4F7F-BA90-A317A0628FF9}.Debug|x64.ActiveCfg = Debug|x64
+		{5C9314CA-2FF9-4F7F-BA90-A317A0628FF9}.Debug|x64.Build.0 = Debug|x64
+		{5C9314CA-2FF9-4F7F-BA90-A317A0628FF9}.Debug|x86.ActiveCfg = Debug|Win32
+		{5C9314CA-2FF9-4F7F-BA90-A317A0628FF9}.Debug|x86.Build.0 = Debug|Win32
+		{5C9314CA-2FF9-4F7F-BA90-A317A0628FF9}.Release|Any CPU.ActiveCfg = Release|Win32
+		{5C9314CA-2FF9-4F7F-BA90-A317A0628FF9}.Release|x64.ActiveCfg = Release|x64
+		{5C9314CA-2FF9-4F7F-BA90-A317A0628FF9}.Release|x64.Build.0 = Release|x64
+		{5C9314CA-2FF9-4F7F-BA90-A317A0628FF9}.Release|x86.ActiveCfg = Release|Win32
+		{5C9314CA-2FF9-4F7F-BA90-A317A0628FF9}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

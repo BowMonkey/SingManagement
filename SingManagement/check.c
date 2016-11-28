@@ -26,17 +26,20 @@ bool check(void)
 		else
 		{
 			fprintf(fp, "123456");
-			fclose(fp);         
+			fclose(fp);  
+			fp = NULL;
 
 			fp = fopen("DATA", "r+");
 			fscanf(fp, "%s", passWord);
 			fclose(fp);
+			fp = NULL;
 		}
 	}
 	else
 	{
 		fscanf(fp, "%s", passWord);
 		fclose(fp);
+		fp = NULL;
 	}
 
 	printf("«Î ‰»Î√‹¬Î£∫");
