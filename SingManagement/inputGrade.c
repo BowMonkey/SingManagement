@@ -12,6 +12,7 @@ void Bubble_Sort(int *num,int n);
 
 void inputGrade(void)
 {
+	char ch;
 	bool numExist = true;
 	unsigned int i = 0;
 	unsigned int j = 1;
@@ -36,6 +37,12 @@ void inputGrade(void)
 				system("cls");
 				showList(list);
 				printf("请输入要打分的选手编号：");
+				//添加输入判断
+				//ch = getchar();
+				//if (ch)
+				//{
+
+				//}
 				scanf("%u", &num);
 			rechoose:
 				pnode = list;
@@ -124,8 +131,15 @@ void inputScore(Node *pnode)
 	int i;
 	for (i = 0; i < 10; i++)
 	{
+	re:
 		printf("第%d评委的打分：", (i + 1));
 		scanf("%d", &pnode->singer.score[i]);
+		/*限制分数范围1-10，超出则重新输*/
+		if(pnode->singer.score[i] < 0 || pnode->singer.score[i] > 10)
+		{
+			printf("选手得分超出规定范围，请输入0~10之间的数字！\n");
+			goto re;
+		}
 	}
 	for (i = 0; i < 10; i++)
 	{
@@ -140,6 +154,7 @@ double averageScore(Node *pnode)
 {
 	int i;
 	int sum = 0;
+	double average = 0;
 	int array[10];//新建array数组用来排序，保护原始数据
 	//给用于排序的数组赋值
 	for (size_t i = 0; i < 10; i++)
@@ -153,7 +168,8 @@ double averageScore(Node *pnode)
 	{
 		sum += array[i];
 	}
-	return (sum / 8);
+	average = sum / 8.0;
+	return average;
 }
 
 

@@ -31,8 +31,8 @@ void Rank(void)
 	}
 	else
 	{
-		printf("这是已有信息：\n");
-		showList(list);
+		//printf("这是已有信息：\n");
+		//showList(list);
 
 	rechoose:
 		printf("一：按编号顺序显示\n");
@@ -44,7 +44,6 @@ void Rank(void)
 		{
 		case 1: system("cls");
 			showList(list);
-			printf("按回车退出。\n");
 			while (getchar() != '\n')
 				continue;
 			break;

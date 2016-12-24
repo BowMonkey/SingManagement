@@ -10,7 +10,8 @@ Singer temp;
 
 void inputInfo()
 {
-	int i;
+	int i = 1;
+	char ch;
 	FILE * fp;
 	if (check())
 	{
@@ -29,11 +30,13 @@ void inputInfo()
 		}
 
 		/*搜集并存储歌手信息*/
-		printf("请输入选手编号：");
-		while (scanf("%u", &temp.num) != NULL )
+		//printf("请输入选手编号：");
+		while (1)
 		{
-			while (getchar() != '\n')
-				continue;
+			//编号
+			printf("请输入编号为%d的选手信息:\n", i);
+			temp.num = i;
+
 			printf("请输入选手姓名：");
 			scanf("%s", &temp.name);
      		while (getchar() != '\n')//scanf()不会接收输入最后的'\n',会对下一次调用scanf()造成影响
@@ -61,7 +64,15 @@ void inputInfo()
 				break;
 			}
 
-			printf("输入下一个选手编号（按q退出）：");//要添加编号重复的检查！！！！
+			printf("输入下一个选手信息（按q退出,按其他任意键继续）");
+			i = i + 1;
+			//按q或者Q退出
+			ch = getchar();
+			if (ch == 'q')
+			{
+				return;
+			}
+
 		}
 		
 		while (getchar() != '\n')
