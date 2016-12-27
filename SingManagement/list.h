@@ -10,7 +10,7 @@ struct infotag
 {
 	int num;                        //编号
 	char name[12];                  //姓名
-	char sex[12];                   //性别
+	char sex[12];                   //性别	
 	char phoneNum[10];              //联系方式（电话号码）
 	int score[10];                  //成绩
 	int totalScore;                 //总分

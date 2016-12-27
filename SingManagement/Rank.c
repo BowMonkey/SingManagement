@@ -172,7 +172,7 @@ void BubbleSort(double *num, int n)
 		swapped = false;
 		for (size_t i = 0; i < n - 1; i++)
 		{
-			if (num[i] > num[i + 1])
+			if (num[i] < num[i + 1])
 			{
 				temp = num[i];
 				num[i] = num[i + 1];

@@ -15,10 +15,7 @@ void inputInfo()
 	FILE * fp;
 	if (check())
 	{
-		system("cls");
-		puts("输入要求为blalba(按回车继续)");
-		while (getchar() != '\n')
-			continue;
+
 		system("cls");
 
 		/*初始化*/
@@ -72,11 +69,10 @@ void inputInfo()
 			{
 				return;
 			}
+			while (getchar() != '\n')
+				continue;
 
 		}
-		
-		while (getchar() != '\n')
-			continue;
 		
 		/*显示*/
 		system("cls");

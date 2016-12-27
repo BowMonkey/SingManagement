@@ -1,8 +1,13 @@
 #include <stdio.h>
+
 int main(void)
 {
-	char ch = 9;
-	printf("%d", ch);
+	char a[10];
+	char b[10];
+	printf("ÊäÈëÊı×Ö£º");
+	scanf("%s", &a);
+	sscanf(a, "%[1-9]",&b);
+	printf("%d", b);
 	getchar();
 	/*int num[10];
 	int i = 10;

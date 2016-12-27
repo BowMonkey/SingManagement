@@ -13,6 +13,7 @@ void Bubble_Sort(int *num,int n);
 void inputGrade(void)
 {
 	char ch;
+	int numCount = 1;
 	bool numExist = true;
 	unsigned int i = 0;
 	unsigned int j = 1;
@@ -29,21 +30,17 @@ void inputGrade(void)
 		}
 		else
 		{
-			/*这里while用的有问题，以后改！！！！
-			*/
-			//这个while检测有没有把所有节点赋值完（是否所有选手均被打分）
+			//
 			while (j <= listItemCount(&list))
 			{
 				system("cls");
 				showList(list);
 				printf("请输入要打分的选手编号：");
-				//添加输入判断
-				//ch = getchar();
-				//if (ch)
-				//{
 
-				//}
+				//还要添加输入判断
+
 				scanf("%u", &num);
+		
 			rechoose:
 				pnode = list;
 				//检测所输编号是否存在,存在numExit置为true,否则false
@@ -186,7 +183,7 @@ void Bubble_Sort(int * num,int n)
 		swapped = false;
 		for (size_t i = 0; i < n-1; i++)
 		{
-			if (num[i] > num[i + 1])
+			if (num[i] < num[i + 1])
 			{
 				temp = num[i];
 				num[i] = num[i + 1];

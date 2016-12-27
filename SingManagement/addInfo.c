@@ -56,6 +56,7 @@ void addInfo()
 				printf("第%d评委的打分：", (i + 1));
 				scanf("%d", &newSinger.score[i]);
 				/*限制分数范围1-10，超出则重新输*/
+
 				if (newSinger.score[i] < 0 || newSinger.score[i] > 10)
 				{
 					printf("选手得分超出规定范围，请输入0~10之间的数字！\n");
@@ -76,11 +77,12 @@ void addInfo()
 			//排序
 			Bubble_Sort(array, sizeof(array) / sizeof(int));
 
-			for (size_t i = 1; i < (sizeof(array) / sizeof(int)) - 2; i++)
+			for (size_t i = 1; i <= (sizeof(array) / sizeof(int)) - 2; i++)
 			{
 				sum += array[i];
 			}
 			average = sum / 8.0;
+			sum = 0;
 			newSinger.averageScore = average;
 			//使用addItem(Singer singer, List * plist);接口添加singer到链表
 			if (addItem(newSinger, &pnode))

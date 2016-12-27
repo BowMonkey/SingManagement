@@ -22,7 +22,6 @@ void inquireGrade()
 	}
 	else
 	{
-		showList(pnode);
 		printf("请选择要查询的选手编号：");
 		scanf("%d", &num);
 	rechoose:
@@ -75,7 +74,7 @@ void inquireGrade()
 		else
 		{
 			system("cls");
-			showList(list);
+			//showList(list);
 			printf("编号不存在！请重新输入：");
 			scanf("%d", &num);
 			goto rechoose;
